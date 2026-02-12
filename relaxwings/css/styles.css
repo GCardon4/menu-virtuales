@@ -1,0 +1,105 @@
+/* == Copyright Menú Virtuales
+
+Gustavo Cardona
+admin@gustavocardona.com
+
+*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,500;0,600;1,500&display=swap');
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-image: url(../images/bground.jpg);
+    background-repeat: repeat-y;
+}
+
+.color-a{
+    color: #EF7D00;
+}
+.color-b{
+    color: #490700;
+}
+
+.bg-color-a{
+    background-color: #EF7D00;
+}
+.bg-color-b{
+    background-color: #490700;
+}
+.ingredients-class{
+    font-weight: 300;
+}
+.cambia-combo{
+    margin-bottom: 40%;
+    width: 100%;
+    padding: 10%;
+    border-radius: 5%;
+}
+.cambia-combo img{
+    position: relative;
+    float: right;
+}
+.salsas{
+    width: 100%;
+}
+.salsas ul{
+    list-style: none;
+}
+.salsas ul li::before {
+    content: "\2022";  
+    color: #EF7D00;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+  }
+
+.parrilla-info{
+    width: 100%;
+    padding: 5%;
+    border-radius: 5%;
+}
+.info{
+    
+}
+.info img{
+    position: absolute;
+    right: 5%;
+    bottom: 100%;
+    width: 3rem;
+}
+
+.table{ 
+    color: #ffffff;
+}
+
+.table-striped>tr:nth-child(odd){
+    color: #ffffff;
+ }
+ .table-striped>tbody>tr:nth-child(odd)>td,
+ .table-striped>tbody>tr:nth-child(odd)>th {
+   background-color: rgba(73, 7, 0, 0.5);
+   color: white;
+ }
+
+.accordion-body:not(.collapsed){
+    color: #ffffff;
+    background-image: url(../images/bg-item.jpg);
+    background-repeat: repeat-y;
+    
+}
+
+.accordion-button:not(.collapsed){
+    color: #000000;
+    background-color: #FFED00;
+    
+}
+
+.accordion-collapse img{
+    margin: 0%;
+    padding: 0%;
+}
+
+
+.combo-cerveza img{
+    position: relative;
+}

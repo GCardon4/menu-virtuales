@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asados San Juan - Menú</title>
+
+   <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-930SPN05PB"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-930SPN05PB');
+    </script>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/styles.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+</head>
+<body>
+
+    <header>
+      <img src="images/sanjuan-logo.jpg" alt="">
+
+    </header>
+
+    <section class="mb-5 pb-5 container" style="position: relative; z-index: 10;">
+        <div class="accordion accordion-flush" id="accordionFlushWings">
+
+            <div id="entradas" class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingOne">
+                <button class="accordion-button collapsed producto-title" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                  Entradas
+                </button>
+              </h2>
+              <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne">
+
+                <img class="container" src="images/entradas.jpg" alt="Entradas">
+
+                <div class="accordion-body">
+
+                  <table class="table table-striped">
+                    <tbody>
+                        <tr v-for="product in products">  
+                            <td>
+                                <strong class="m-0">{{ product.name }}</strong><br/>
+                                <span class="ingredients-class">{{ product.ingredients }}</span>
+                            </td>
+                            <td class="price"><strong>{{ product.price }}</strong></td>
+                        </tr>
+                    </tbody>
+    
+                </table>
+                </div>
+              </div>
+            </div>
+
+
+            <div id="desayunos" class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingTwo">
+                <button class="accordion-button producto-title collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                  Desayunos
+                </button>
+              </h2>
+              <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo">
+
+                <img class="container" src="images/desayunos.jpg" alt="Desayunos">
+                
+                <div class="accordion-body">
+                  
+                  <table class="table table-striped">
+                    <tbody>
+                        <tr v-for="product in products">  
+                            <td>
+                                <strong class="m-0">{{ product.name }}</strong><br/>
+                                <span class="ingredients-class">{{ product.ingredients }}</span>
+                            </td>
+                            <td class="price"><strong>{{ product.price }}</strong></td>
+                        </tr>
+                    </tbody>
+    
+                </table>
+
+
+                </div>
+              </div>
+            </div>
+
+
+            <div id="almuerzos" class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingThree">
+                <button class="accordion-button collapsed producto-title" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                  Almuerzos
+                </button>
+              </h2>
+              <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree">
+
+                <img class="container" src="images/almuerzos.jpg" alt="Almuerzos">
+
+
+                <div class="accordion-body">
+                  
+                  <table class="table table-striped">
+                    <tbody>
+                        <tr v-for="product in products">  
+                            <td>
+                                <strong class="m-0">{{ product.name }}</strong><br/>
+                                <span class="ingredients-class">{{ product.ingredients }}</span>
+                            </td>
+                            <td class="price"><strong>{{ product.price }}</strong></td>
+                        </tr>
+                    </tbody>
+    
+                </table>
+
+                </div>
+              </div>
+            </div>
+
+
+            <div id="pollo" class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingFour">
+                <button class="accordion-button producto-title collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                  Pollo
+                </button>
+              </h2>
+              <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour">
+
+                <img class="container" src="images/pollo.jpg" alt="Pollo">
+
+
+                <div class="accordion-body">
+                  
+                  <table class="table table-striped">
+                    <tbody>
+                        <tr v-for="product in products">  
+                            <td>
+                                <strong class="m-0">{{ product.name }}</strong><br/>
+                                <span class="ingredients-class">{{ product.ingredients }}</span>
+                            </td>
+                            <td class="price"><strong>{{ product.price }}</strong></td>
+                        </tr>
+                    </tbody>
+    
+                </table>
+                </div>
+              </div>
+            </div>
+
+
+            <div id="la-carta" class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingFive">
+                <button class="accordion-button producto-title collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                  Platos a la Carta
+                </button>
+              </h2>
+              <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive">
+
+                <img class="container" src="images/chicharron.jpg" alt="Platos a la Carta">
+
+                <div class="accordion-body">
+                  
+                  <table class="table table-striped">
+                    <tbody>
+                        <tr v-for="product in products">  
+                            <td>
+                                <strong class="m-0">{{ product.name }}</strong><br/>
+                                <span class="ingredients-class">{{ product.ingredients }}</span>
+                            </td>
+                            <td class="price"><strong>{{ product.price }}</strong></td>
+                        </tr>
+                    </tbody>
+    
+                </table>
+
+                <div class="promo-martes">
+                  <h3>Pregunta por nuestros combos de hamburguesas y pollo los días martes y jueves</h3>
+                </div>
+
+                </div>
+              </div>
+            </div>
+
+
+            <div id="parrilla" class="accordion-item">
+              <h2 class="accordion-header" id="flush-parrilla">
+                <button class="accordion-button producto-title collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseParrilla" aria-expanded="false" aria-controls="flush-collapseParrilla">
+                  Parrilla
+                </button>
+              </h2>
+              <div id="flush-collapseParrilla" class="accordion-collapse collapse" aria-labelledby="flush-parrilla">
+
+                <img class="container" src="images/parrilla.jpg" alt="Parrilla">
+
+
+                <div class="accordion-body">
+              
+                  <table class="table table-striped" id="carne-res">  <!--Carne de Res-->
+                    <div class="subtitulo-producto">
+                      <h2>Carne de Res</h2>
+                    </div>
+                    <tbody>
+                        <tr v-for="product in products">  
+                            <td>
+                                <strong class="m-0">{{ product.name }}</strong><br/>
+                                <span class="ingredients-class">{{ product.ingredients }}</span>
+                            </td>
+                            <td class="price"><strong>{{ product.price }}</strong></td>
+                        </tr>
+                    </tbody>    
+                </table> 
+                <div><i>con papa a la francesa o papa al vapor, ensalada, arepa gratinada</i></div>
+
+                 <table class="table table-striped" id="pescados"> <!--Pescados-->
+                    <div class="subtitulo-producto">
+                      <h2>Pescado</h2>
+                    </div>
+                    <tbody>
+                        <tr v-for="product in products">  
+                            <td>
+                                <strong class="m-0">{{ product.name }}</strong><br/>
+                                <span class="ingredients-class">{{ product.ingredients }}</span>
+                            </td>
+                            <td class="price"><strong>{{ product.price }}</strong></td>
+                        </tr>
+                    </tbody>
+                  </table>
+
+
+                  <table class="table table-striped" id="cerdo"> <!--Cerdo-->
+                    <div class="subtitulo-producto">
+                      <h2>Cerdo</h2>
+                    </div>
+                    <tbody>
+                        <tr v-for="product in products">  
+                            <td>
+                                <strong class="m-0">{{ product.name }}</strong><br/>
+                                <span class="ingredients-class">{{ product.ingredients }}</span>
+                            </td>
+                            <td class="price"><strong>{{ product.price }}</strong></td>
+                        </tr>
+                    </tbody>
+                  </table>
+                  <div><i>con papa a la francesa o papa al vapor, ensalada</i></div>
+
+                  <table class="table table-striped" id="pollo-parrilla"> <!--Pollo a la Parrilla-->
+                    <div class="subtitulo-producto">
+                      <h2>Pollo</h2>
+                    </div>
+                    <tbody>
+                        <tr v-for="product in products">  
+                            <td>
+                                <strong class="m-0">{{ product.name }}</strong><br/>
+                                <span class="ingredients-class">{{ product.ingredients }}</span>
+                            </td>
+                            <td class="price"><strong>{{ product.price }}</strong></td>
+                        </tr>
+                    </tbody>
+                  </table>
+
+                  <table class="table table-striped" id="costillas"> <!--Costillas-->
+                    <div class="subtitulo-producto">
+                      <h2>Costillas</h2>
+                    </div>
+                    <tbody>
+                        <tr v-for="product in products">  
+                            <td>
+                                <strong class="m-0">{{ product.name }}</strong><br/>
+                                <span class="ingredients-class">{{ product.ingredients }}</span>
+                            </td>
+                            <td class="price"><strong>{{ product.price }}</strong></td>
+                        </tr>
+                    </tbody>
+                  </table>
+
+
+
+                </div>
+              </div>
+            </div>
+
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-fastFood">
+                <button class="accordion-button producto-title collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-fastFood" aria-expanded="false" aria-controls="flush-fastFood">
+                  Cómidas Rápidas
+                </button>
+              </h2>
+              <div id="flush-fastFood" class="accordion-collapse collapse" aria-labelledby="flush-fastFood">
+
+                <img class="container" src="images/fastfood.jpg" alt="Cómidas Rápidas">
+
+                <div class="accordion-body">
+                  
+                  <table class="table table-striped" id="hamburguesas"> <!--Hamburguesas-->
+                    <div class="subtitulo-producto">
+                      <h2>Hamburguesas</h2>
+                    </div>
+                    <tbody>
+                        <tr v-for="product in products">  
+                            <td>
+                                <strong class="m-0">{{ product.name }}</strong><br/>
+                                <span class="ingredients-class">{{ product.ingredients }}</span>
+                            </td>
+                            <td class="price"><strong>{{ product.price }}</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <table class="table table-striped" id="salchipapas"> <!--Salchipapas-->
+                    <div class="subtitulo-producto">
+                      <h2>Salchipapas</h2>
+                    </div>
+                    <tbody>
+                        <tr v-for="product in products">  
+                            <td>
+                                <strong class="m-0">{{ product.name }}</strong><br/>
+                                <span class="ingredients-class">{{ product.ingredients }}</span>
+                            </td>
+                            <td class="price"><strong>{{ product.price }}</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+
+                </div>
+              </div>
+            </div>
+
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-alitas">
+                <button class="accordion-button producto-title collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-alitas" aria-expanded="false" aria-controls="flush-alitas">
+                  Combos de Alitas
+                </button>
+              </h2>
+              <div id="flush-alitas" class="accordion-collapse collapse" aria-labelledby="flush-alitas">
+
+                <img class="container" src="images/alitas.jpg" alt="alitas">
+
+                <div class="accordion-body">
+                  
+                  <table class="table table-striped" id="alitas"> <!--Alitas-->
+                    <div class="subtitulo-producto">
+                      <h2>Alitas</h2>
+                    </div>
+                    <tbody>
+                        <tr v-for="product in products">  
+                            <td>
+                                <strong class="m-0">{{ product.name }}</strong><br/>
+                                <span class="ingredients-class">{{ product.ingredients }}</span>
+                            </td>
+                            <td class="price"><strong>{{ product.price }}</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <table class="table table-striped" id="crispetas"> <!--Crispetas-->
+                    <div class="subtitulo-producto">
+                      <h2>Crispetas de Pollo</h2>
+                    </div>
+                    <tbody>
+                        <tr v-for="product in products">  
+                            <td>
+                                <strong class="m-0">{{ product.name }}</strong><br/>
+                                <span class="ingredients-class">{{ product.ingredients }}</span>
+                            </td>
+                            <td class="price"><strong>{{ product.price }}</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+
+                </div>
+              </div>
+            </div>
+
+            <div id="waffles" class="accordion-item">
+              <h2 class="accordion-header" id="flush-waffles">
+                <button class="accordion-button producto-title collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-waffles" aria-expanded="false" aria-controls="flush-waffles">
+                  Waffles
+                </button>
+              </h2>
+              <div id="flush-waffles" class="accordion-collapse collapse" aria-labelledby="flush-waffles">
+
+                <img class="container" src="images/waffles.jpg" alt="Waffles">
+
+
+                <div class="accordion-body">
+                  
+                  <table class="table table-striped">
+                    <tbody>
+                        <tr v-for="product in products">  
+                            <td>
+                                <strong class="m-0">{{ product.name }}</strong><br/>
+                                <span class="ingredients-class">{{ product.ingredients }}</span>
+                            </td>
+                            <td class="price"><strong>{{ product.price }}</strong></td>
+                        </tr>
+                    </tbody>
+    
+                </table>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-bebidas">
+                <button class="accordion-button producto-title collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-bebidas" aria-expanded="false" aria-controls="flush-bebidas">
+                  Bebidas
+                </button>
+              </h2>
+              <div id="flush-bebidas" class="accordion-collapse collapse" aria-labelledby="flush-bebidas">
+
+                <img class="container" src="images/bebidas.jpg" alt="Bebidas">
+
+                <div class="accordion-body">
+                  
+                  <table class="table table-striped" id="bebidas-calientes"> <!--Bebidas Calientes-->
+                    <div class="subtitulo-producto">
+                      <h2>Bebidas Calientes</h2>
+                    </div>
+                    <tbody>
+                        <tr v-for="product in products">  
+                            <td>
+                                <strong class="m-0">{{ product.name }}</strong><br/>
+                                <span class="ingredients-class">{{ product.ingredients }}</span>
+                            </td>
+                            <td class="price"><strong>{{ product.price }}</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+
+                 <table class="table table-striped" id="bebidas-frias"> <!--Bebidas Frías-->
+                    <div class="subtitulo-producto">
+                      <h2>Bebidas Frías</h2>
+                    </div>
+                    <tbody>
+                        <tr v-for="product in products">  
+                            <td>
+                                <strong class="m-0">{{ product.name }}</strong><br/>
+                                <span class="ingredients-class">{{ product.ingredients }}</span>
+                            </td>
+                            <td class="price"><strong>{{ product.price }}</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+
+                 <table class="table table-striped" id="limonadas"> <!--Limonadas-->
+                    <div class="subtitulo-producto">
+                      <h2>Limonadas y Sodas</h2>
+                    </div>
+                    <tbody>
+                        <tr v-for="product in products">  
+                            <td>
+                                <strong class="m-0">{{ product.name }}</strong><br/>
+                                <span class="ingredients-class">{{ product.ingredients }}</span>
+                            </td>
+                            <td class="price"><strong>{{ product.price }}</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                 <table class="table table-striped" id="licores"> <!--Licores-->
+                    <div class="subtitulo-producto">
+                      <h2>Licores</h2>
+                    </div>
+                    <tbody>
+                        <tr v-for="product in products">  
+                            <td>
+                                <strong class="m-0">{{ product.name }}</strong><br/>
+                                <span class="ingredients-class">{{ product.ingredients }}</span>
+                            </td>
+                            <td class="price"><strong>{{ product.price }}</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                </div>
+              </div>
+            </div>
+
+          </div>
+    </section>
+
+    <section class="todos-section mb-5 container" >
+      <div class="promo-todos">
+        <h2>Para Todos</h2>
+        <ul>
+          <li>FRIJOLES</li>
+          <li>CONSOMÉ DE PESCADO</li>
+          <li>CALDO DE COSTILLA DE RES</li>
+          <li>CONSOMÉ DE MENUDENCIAS</li>
+        </ul>
+        <div>
+          GRANDE $12.000 <br/>
+          MEDIANO $9.500
+        </div>
+      </div>
+    </section>
+
+
+    <footer class="footer d-flex justify-content-center align-items-center">
+      <a href="https://www.instagram.com/asaderosanjuan/" target="_blank" class="enlace-redes" rel="noopener noreferrer">
+          <img src="../images/instagram.svg" alt="Instagram">
+      </a> 
+
+      <a href="https://wa.me/+573225873238" target="_blank" class="enlace-redes" rel="noopener noreferrer">
+          <img src="../images/whatsapp.svg" alt="WhatsApp">
+      </a>
+  </footer>
+    
+</body>
+
+<script src="js/app.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+
+</html>

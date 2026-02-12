@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap');
+
+body{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 16px;
+
+}
+
+.logotipo{
+    
+}
+
+.info{
+    color: #ffffff;
+    background-color: #04455B;
+}
+.info a{
+    color: #ffffff;
+    font-weight: bolder;
+}
+.info img{
+    width: 1.5rem;
+}
+
+
