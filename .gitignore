@@ -1,3 +1,6 @@
 
 # carpeta de ideas
 /papaspues/ideas
+# build de tipicos
+tipicos/node_modules/
+tipicos/dist/

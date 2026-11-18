@@ -3,3 +3,5 @@ Dockerfile
 .git
 id_rsa
 nginx.conf
+node_modules
+tipicos
